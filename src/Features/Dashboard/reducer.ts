@@ -21,7 +21,6 @@ const slice = createSlice({
     storeselectedMetricValues: (state, action) => {
       state.selectedMetricValues = action.payload;
     },
-    //   weatherApiErrorReceived: (state, action: PayloadAction<ApiErrorAction>) => state,
   },
 });
 

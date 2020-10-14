@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-
 import Plot from 'react-plotly.js';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -22,7 +21,6 @@ query($input: [MeasurementQuery]){
     }
     }
 }
-
 `;
 
 const selectedMetricStyle = {
@@ -45,7 +43,6 @@ function MetricsChart() {
   const classes = useStyles();
   const dispatch = useDispatch();
   const { selectedMetricValues, selectedMetric, currentTime } = useSelector((state: IState) => state.metrics);
-
   const [result] = useQuery({
     query,
     variables: {
@@ -96,6 +93,7 @@ function MetricsChart() {
           `,
           text: list.measurements,
         }))}
+
         layout={{
           height: 500,
           width: 700,
@@ -105,7 +103,6 @@ function MetricsChart() {
           },
           yaxis: {
             autorange: true,
-
             type: 'linear',
           },
         }}
