@@ -11,7 +11,7 @@ import MetricsChart from './MetricsChart';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     card: {
-      margin: '5% 25%',
+      margin: '10% 10%',
     },
     button: {
       display: 'block',

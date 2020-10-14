@@ -75,7 +75,7 @@ function MetricsList() {
         const { getMetrics } = data;
         dispatch(actions.metricsDataReceived(getMetrics));
       }
-    }, [data, error]);
+    }, [dispatch,data, error]);
     if (fetching) return <LinearProgress />;
   
     const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
